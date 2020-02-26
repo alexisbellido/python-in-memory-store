@@ -5,8 +5,8 @@ from store import Store
 if __name__ == "__main__":
 
     # num = int(input("Enter a number\n"))
+    # num = 10000000
     num = 10000000
-    # num = 1000
     print(f"Storing {num:,} keys...")
 
     start_time = time.time()
@@ -35,3 +35,14 @@ if __name__ == "__main__":
     end_time = time.time()
     elapsed = (end_time - start_time) * 1000
     print(f'Milliseconds elapsed to retrieve each key: {elapsed/num}')
+
+# Retrieving 1,000,000 keys...
+# Milliseconds elapsed to retrieve each key: 0.000797520637512207
+
+# Storing 10,000,000 keys...
+# Keys stored: 10,000,000
+# Milliseconds per key: 0.0012958096265792847
+# Bytes used by store: 335,544,424
+# Bytes used per key: 33.5544424
+# Retrieving 10,000,000 keys...
+# Milliseconds elapsed to retrieve each key: 0.000791901159286499

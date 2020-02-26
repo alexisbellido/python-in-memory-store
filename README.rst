@@ -42,6 +42,8 @@ You can use the following methods:
 Some time and memory values after storing and retrieving 10 million keys
 -------------------------------------------------------------------------------------
 
+A couple of runs as a single thread.
+
 .. code-block:: bash
 
   $ python use-store.py
@@ -52,6 +54,30 @@ Some time and memory values after storing and retrieving 10 million keys
   Bytes used per key: 33.5544424
   Retrieving 10,000,000 keys...
   Milliseconds elapsed to retrieve each key: 0.0007979944467544556
+
+.. code-block:: bash
+
+  $ python use-store.py
+  Storing 10,000,000 keys...
+  Keys stored: 10,000,000
+  Milliseconds per key: 0.0013451412439346314
+  Bytes used by store: 335,544,424
+  Bytes used per key: 33.5544424
+  Retrieving 10,000,000 keys...
+  Milliseconds elapsed to retrieve each key: 0.0008334815740585328
+
+And here the results from running use-store-multi.py, which separates the 10 million keys in different blocks of keys to run in multiple threads (the current version is hardcoded to five threads for demonstration purposes).
+
+.. code-block:: bash
+
+  # Retrieving 10,000,000 keys in multiple threads...
+  # Milliseconds elapsed to retrieve each key in 5 threads: 0.0008087094783782959
+
+  # Retrieving 10,000,000 keys in multiple threads...
+  # Milliseconds elapsed to retrieve each key in 500 threads: 0.0008524939060211181
+
+  # Retrieving 10,000,000 keys in multiple threads...
+  # Milliseconds elapsed to retrieve each key in 5000 threads: 0.0008140542030334473
 
 
 Performance and memory usage
