@@ -13,6 +13,8 @@ The basic usage is like this.
 
 Unit tests for all the class methods are in test-store.py.
 
+The use-store.py script uses the class to measure times and memory when storing and retrieving 10 million keys.
+
 Methods
 ------------------------------------------------------------------------
 You can use the following methods:
