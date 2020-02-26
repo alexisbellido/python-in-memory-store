@@ -21,6 +21,19 @@ Assigns `value` to `key`.
 *Store.get('key')*
 Retrieves the stored in `key`.
 
+Some time and memory values after storing and retrieving 10 million keys.
+
+.. code-block:: bash
+
+  $ python use-store.py 
+  Storing 10,000,000 keys...
+  Keys stored: 10,000,000
+  Milliseconds per key: 0.001250524640083313
+  Bytes used by store: 335,544,424
+  Bytes used per key: 33.5544424
+  Retrieving 10,000,000 keys...
+  Milliseconds elapsed to retrieve each key: 0.0007979944467544556
+
 
 Performance and memory usage
 -------------------------------------------------------------------
@@ -43,7 +56,7 @@ Put a key/value pair
 
 Put a key/value pair that has an optional expiration value
 
-Retrieve a key/value pair
+Retrieve a key/value pairc
 
 Delete a key/value pair
 
