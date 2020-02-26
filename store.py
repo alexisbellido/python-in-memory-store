@@ -2,6 +2,9 @@ import time
 
 
 class Store:
+    """
+    A class to manage a dictionary as an in-memory key-value store.
+    """
 
     _store = {}
 
